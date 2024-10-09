@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comi</title>
+</head>
+
+<body>
+    <header>
+        <h1>탄소 계산기</h1>
+    </header>
+    <nav>
+        </section>
+        </main>
+        <footer>
+            <p>&copy;
+                <!DOCTYPE html>
+                <html lang="ko">
+
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>탄소 발자국 계산기</title>
+                    <style>
+                        body {
+                            font-family: Arial, sans-serif;
+                            background-color: #f0f0f0;
+                            text-align: center;
+                            padding: 20px;
+                        }
+
+                        h1 {
+                            color: #333;
+                        }
+
+                        input,
+                        button {
+                            padding: 10px;
+                            margin: 10px;
+                            font-size: 16px;
+                        }
+                    </style>
+                </head>
+
+                <body>
+
+                    <h1>전자기기 사용으로 인한 탄소 발자국 계산기</h1>
+                    <p>당신의 하루 평균 전자기기 사용 시간은 몇 시간인가요?</p>
+                    <input type="number" id="hours" placeholder="사용 시간 입력" />
+                    <button onclick="calculateCarbon()">계산하기</button>
+
+                    <p id="result"></p>
+
+                    <script>
+                        function calculateCarbon() {
+                            var hours = document.getElementById('hours').value;
+                            if (hours === '' || hours < 0) {
+                                document.getElementById('result').innerHTML = "올바른 시간을 입력해주세요.";
+                                return;
+                            }
+
+                            var carbon = hours * 82.5;  // 시간당 82.5g의 탄소 배출
+                            document.getElementById('result').innerHTML =
+                                "당신은 탄소 발자국을 " + carbon + "g 만큼 배출하였습니다.";
+                        }
+                    </script>
+
+                </body>
+
+                </html>
+            </p>
+        </footer>
